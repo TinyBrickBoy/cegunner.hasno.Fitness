@@ -1,113 +1,53 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CEGUNNER – Kein Fitness, Kein Problem 🍕</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(135deg, #222, #444);
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    h1 {
-      font-size: clamp(2.5rem, 6vw, 5rem);
-      margin-bottom: 20px;
-    }
-
-    .tagline {
-      font-size: 1.5rem;
-      color: #ff6b6b;
-      margin-bottom: 30px;
-    }
-
-    .couch {
-      font-size: 5rem;
-      margin-bottom: 20px;
-    }
-
-    .facts {
-      background: #333;
-      padding: 30px;
-      border-radius: 15px;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    }
-
-    .fact {
-      font-size: 1.2rem;
-      margin: 15px 0;
-    }
-
-    .fact strong {
-      color: #ffa;
-    }
-
-    .button {
-      padding: 15px 25px;
-      background: #ff6b6b;
-      color: white;
-      border: none;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      transform: scale(1.05);
-      background: #ff4c4c;
-    }
-
-    #lazyFact {
-      margin-top: 30px;
-      font-size: 1.2rem;
-      color: #ffc;
-      min-height: 1.5em;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Zeiros – Das epische Walross 🐋❄️</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gradient-to-br from-blue-100 to-cyan-200 font-sans text-gray-900">
 
-  <h1>CEGUNNER</h1>
-  <div class="tagline">💤 Der einzige Streamer mit negativer Muskelmasse</div>
-  <div class="couch">🛋️🍕🕹️</div>
+  <!-- Header Meme Hero -->
+  <header class="text-center py-16 px-4 bg-blue-900 text-white">
+    <h1 class="text-5xl md:text-6xl font-extrabold drop-shadow-lg">🐋 BLUE ZEIROS ❄️</h1>
+    <p class="text-xl mt-4 italic">„Das coolste Walross seit dem Eiszeitalter“</p>
+    <p class="mt-6 text-sm opacity-80">#NoFilter #Naturtalent #ArcticInfluencer</p>
+  </header>
 
-  <div class="facts">
-    <div class="fact"><strong>Workout-Routine:</strong> Netflix-Binge & Chips-Curls</div>
-    <div class="fact"><strong>Körperfettanteil:</strong> ja</div>
-    <div class="fact"><strong>Lieblingsübung:</strong> Alt+Tab</div>
-    <div class="fact"><strong>Kalorienverbrauch:</strong> 0.1 kcal durch Lachen</div>
-  </div>
+  <!-- Lustiger Fun-Fact Bereich -->
+  <section class="max-w-3xl mx-auto mt-12 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4">Warum ist Blue Zeiros ein 🐐?</h2>
+    <p class="text-lg leading-relaxed">
+      🔹 Hat mehr Bart als dein Lieblingsrapper <br>
+      🔹 Kann 30 Minuten unter Wasser bleiben – ohne WLAN 😱<br>
+      🔹 Chillt auf Eisschollen wie andere auf Hängematten<br>
+      🔹 Wird jedes Jahr zum "Arktischen Fashion-Icon" gewählt 🧊💅
+    </p>
+  </section>
 
-  <button class="button" onclick="showLazyFact()">Random Nicht-Fitness-Fakt 🔁</button>
-  <div id="lazyFact"></div>
+  <!-- Bild mit Meme Caption -->
+  <section class="mt-16 px-4">
+    <div class="max-w-xl mx-auto">
+      <img src="https://source.unsplash.com/800x500/?walrus,cold" alt="Blue Zeiros" class="rounded-xl shadow-xl border-4 border-white">
+      <p class="mt-4 text-center text-xl font-semibold italic">„Ich bin nicht dick, ich bin majestätisch.“ – Blue Zeiros</p>
+    </div>
+  </section>
 
-  <script>
-    const lazyFacts = [
-      "CEGUNNER hat beim Sitzen Muskelkater bekommen.",
-      "Er hält 'Cardio' für ein italienisches Nudelgericht.",
-      "Er denkt, ein Sixpack ist ein Bierpaket.",
-      "Sein Schrittzähler hat sich freiwillig gelöscht.",
-      "Er hat versucht, Liegestütze zu googeln.",
-      "Fitnessstudio? Er dachte, das ist ein neuer Streaming-Dienst.",
-      "Sein Lieblingssport ist... nicht."
-    ];
+  <!-- Fan-Zitat -->
+  <section class="bg-white mt-16 py-12 px-4">
+    <div class="max-w-2xl mx-auto text-center">
+      <h2 class="text-2xl font-bold mb-2">Echte Fans sagen:</h2>
+      <blockquote class="italic text-lg">„Ich wollte ein Haustier. Jetzt will ich ein Blue Zeiros.“</blockquote>
+      <p class="mt-2 text-sm text-gray-500">– Internetkommentar, vermutlich ernst gemeint</p>
+    </div>
+  </section>
 
-    function showLazyFact() {
-      const random = lazyFacts[Math.floor(Math.random() * lazyFacts.length)];
-      document.getElementById("lazyFact").textContent = random;
-    }
-
-    // Lazy Fact direkt anzeigen beim Laden
-    setTimeout(showLazyFact, 1000);
-  </script>
+  <!-- Footer mit Fake-Social -->
+  <footer class="bg-blue-800 text-white text-center py-6 mt-16">
+    <p>Folge Blue Zeiros auf MySpace, StudiVZ & TikTok ❄️</p>
+    <p class="text-sm mt-2">© 2025 Blue Zeiros Inc. All Ice Reserved 🧊</p>
+  </footer>
 
 </body>
 </html>
