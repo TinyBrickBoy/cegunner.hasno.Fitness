@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CEGUNNER – Kein Fitness, Kein Problem 🍕</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #222, #444);
+      color: #fff;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      color: #ff6b6b;
+      margin-bottom: 30px;
+    }
+
+    .couch {
+      font-size: 5rem;
+      margin-bottom: 20px;
+    }
+
+    .facts {
+      background: #333;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    .fact {
+      font-size: 1.2rem;
+      margin: 15px 0;
+    }
+
+    .fact strong {
+      color: #ffa;
+    }
+
+    .button {
+      padding: 15px 25px;
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+      background: #ff4c4c;
+    }
+
+    #lazyFact {
+      margin-top: 30px;
+      font-size: 1.2rem;
+      color: #ffc;
+      min-height: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>CEGUNNER</h1>
+  <div class="tagline">💤 Der einzige Streamer mit negativer Muskelmasse</div>
+  <div class="couch">🛋️🍕🕹️</div>
+
+  <div class="facts">
+    <div class="fact"><strong>Workout-Routine:</strong> Netflix-Binge & Chips-Curls</div>
+    <div class="fact"><strong>Körperfettanteil:</strong> ja</div>
+    <div class="fact"><strong>Lieblingsübung:</strong> Alt+Tab</div>
+    <div class="fact"><strong>Kalorienverbrauch:</strong> 0.1 kcal durch Lachen</div>
+  </div>
+
+  <button class="button" onclick="showLazyFact()">Random Nicht-Fitness-Fakt 🔁</button>
+  <div id="lazyFact"></div>
+
+  <script>
+    const lazyFacts = [
+      "CEGUNNER hat beim Sitzen Muskelkater bekommen.",
+      "Er hält 'Cardio' für ein italienisches Nudelgericht.",
+      "Er denkt, ein Sixpack ist ein Bierpaket.",
+      "Sein Schrittzähler hat sich freiwillig gelöscht.",
+      "Er hat versucht, Liegestütze zu googeln.",
+      "Fitnessstudio? Er dachte, das ist ein neuer Streaming-Dienst.",
+      "Sein Lieblingssport ist... nicht."
+    ];
+
+    function showLazyFact() {
+      const random = lazyFacts[Math.floor(Math.random() * lazyFacts.length)];
+      document.getElementById("lazyFact").textContent = random;
+    }
+
+    // Lazy Fact direkt anzeigen beim Laden
+    setTimeout(showLazyFact, 1000);
+  </script>
+
+</body>
+</html>
